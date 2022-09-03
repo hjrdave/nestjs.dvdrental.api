@@ -15,6 +15,7 @@
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "create:module": "echo 'module name:' && read name && nest g module /$name && nest g controller /$name && nest g service /$name",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
