@@ -2,17 +2,31 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class Inventory {
-    // @PrimaryGeneratedColumn({
-    //     name: 'film_id',
-    //     type: 'integer'
-    // })
-    // id: number;
+    @PrimaryGeneratedColumn({
+        name: 'inventory_id',
+        type: 'integer'
+    })
+    id: number;
 
-    // @Column({
-    //     name: 'title',
-    //     type: 'varchar',
-    //     nullable: false
-    // })
-    // title: string;
+    @Column({
+        name: 'film_id',
+        type: 'smallint',
+        nullable: false
+    })
+    filmId: number;
+
+    @Column({
+        name: 'store_id',
+        type: 'smallint',
+        nullable: false
+    })
+    storeId: number;
+
+    @Column({
+        name: 'last_update',
+        type: 'timestamp',
+        nullable: false
+    })
+    lastUpdate: string;
 
 }
