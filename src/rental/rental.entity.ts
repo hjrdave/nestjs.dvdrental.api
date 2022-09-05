@@ -20,14 +20,14 @@ export class Rental {
         type: 'integer',
         nullable: false
     })
-    inventoryId: string;
+    inventoryId: number;
 
     @Column({
         name: 'customer_id',
         type: 'smallint',
         nullable: false
     })
-    customerId: string;
+    customerId: number;
 
     @Column({
         name: 'return_date',
@@ -40,7 +40,7 @@ export class Rental {
         type: 'smallint',
         nullable: false
     })
-    staffId: string;
+    staffId: number;
 
     @Column({
         name: 'last_update',

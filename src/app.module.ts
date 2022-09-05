@@ -16,6 +16,7 @@ import { CountryModule } from './country/country.module';
 import { CityModule } from './city/city.module';
 import { CategoryModule } from './category/category.module';
 import { AddressModule } from './address/address.module';
+import { LanguageModule } from './language/language.module';
 
 @Module({
   imports: [
@@ -48,7 +49,8 @@ import { AddressModule } from './address/address.module';
     PaymentModule,
     RentalModule,
     StaffModule,
-    StoreModule
+    StoreModule,
+    LanguageModule
   ]
 })
 export class AppModule { }

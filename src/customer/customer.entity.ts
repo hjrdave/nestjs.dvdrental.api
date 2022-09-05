@@ -13,7 +13,7 @@ export class Customer {
         type: 'smallint',
         nullable: false
     })
-    storeId: string;
+    storeId: number;
 
     @Column({
         name: 'first_name',
@@ -40,7 +40,7 @@ export class Customer {
         type: 'smallint',
         nullable: false
     })
-    addressId: string;
+    addressId: number;
 
     @Column({
         name: 'activebool',
@@ -54,7 +54,7 @@ export class Customer {
         type: 'date',
         nullable: false
     })
-    createDate: string;
+    createDate: Date;
 
     @Column({
         name: 'last_update',
@@ -66,6 +66,6 @@ export class Customer {
         name: 'active',
         type: 'integer'
     })
-    active: string;
+    active: number;
 
 }

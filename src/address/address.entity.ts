@@ -33,7 +33,7 @@ export class Address {
         type: 'smallint',
         nullable: false
     })
-    cityId: string;
+    cityId: number;
 
     @Column({
         name: 'postal_code',

@@ -27,12 +27,11 @@ export class Staff {
         type: 'smallint',
         nullable: false
     })
-    addressId: string;
+    addressId: number;
 
     @Column({
         name: 'email',
-        type: 'varchar',
-        nullable: false
+        type: 'varchar'
     })
     email: string;
 
@@ -59,8 +58,7 @@ export class Staff {
 
     @Column({
         name: 'password',
-        type: 'varchar',
-        nullable: false
+        type: 'varchar'
     })
     password: string;
 
@@ -73,9 +71,8 @@ export class Staff {
 
     @Column({
         name: 'picture',
-        type: 'bytea',
-        nullable: false
+        type: 'bytea'
     })
-    picture: number;
+    picture: File;
 
 }

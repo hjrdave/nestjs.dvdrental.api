@@ -1,26 +1,19 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class City {
+export class Language {
     @PrimaryGeneratedColumn({
-        name: 'city_id',
+        name: 'language_id',
         type: 'integer'
     })
     id: number;
 
     @Column({
-        name: 'city',
-        type: 'varchar',
+        name: 'name',
+        type: 'character',
         nullable: false
     })
-    city: string;
-
-    @Column({
-        name: 'country_id',
-        type: 'smallint',
-        nullable: false
-    })
-    countryId: number;
+    name: string;
 
     @Column({
         name: 'last_update',

@@ -4,7 +4,7 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 export class FilmCategory {
     @PrimaryGeneratedColumn({
         name: 'film_id',
-        type: 'integer'
+        type: 'smallint'
     })
     id: number;
 
@@ -13,7 +13,7 @@ export class FilmCategory {
         type: 'smallint',
         nullable: false
     })
-    categoryId: string;
+    categoryId: number;
 
     @Column({
         name: 'last_update',

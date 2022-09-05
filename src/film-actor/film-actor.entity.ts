@@ -13,7 +13,7 @@ export class FilmActor {
         type: 'smallint',
         nullable: false
     })
-    filmId: string;
+    filmId: number;
 
     @Column({
         name: 'last_update',
