@@ -20,7 +20,9 @@ export class FilmService {
         return paginate(query, this.filmRepository, {
             sortableColumns: ['id'],
             defaultSortBy: [['id', 'ASC']],
-            nullSort: 'last'
+            nullSort: 'last',
+            defaultLimit: 50,
+            maxLimit: 1000
         });
     }
 

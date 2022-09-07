@@ -1,7 +1,18 @@
 import { Controller, Get, Param, ParseIntPipe } from '@nestjs/common';
-import { PaginateQuery, Paginated, Paginate } from 'nestjs-paginate';
 import { ActorService } from './actor.service';
-import { Actor } from './actor.entity';
 
 @Controller('actor')
-export class ActorController { }
+export class ActorController {
+    constructor(private readonly actorService: ActorService) { }
+
+    @Get()
+    getFilms() {
+        return this.actorService.findActor();
+    }
+
+    @Get('id/:id')
+    findActorById(@Param('id', ParseIntPipe) id: number) {
+        return this.actorService.findActorById(id);
+    }
+
+}

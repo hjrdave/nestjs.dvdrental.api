@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { FilmModule } from './film/film.module';
-// import { ActorModule } from './actor/actor.module';
+import { ActorModule } from './actor/actor.module';
 // import { StaffModule } from './staff/staff.module';
 // import { RentalModule } from './rental/rental.module';
 // import { PaymentModule } from './payment/payment.module';
@@ -15,6 +15,7 @@ import { FilmModule } from './film/film.module';
 // import { CategoryModule } from './category/category.module';
 // import { AddressModule } from './address/address.module';
 // import { LanguageModule } from './language/language.module';
+import { HomeModule } from './home/home.module';
 
 @Module({
   imports: [
@@ -34,7 +35,8 @@ import { FilmModule } from './film/film.module';
       inject: [ConfigService],
     }),
     FilmModule,
-    // ActorModule,
+    ActorModule,
+    HomeModule,
     // AddressModule,
     // CategoryModule,
     // CityModule,
