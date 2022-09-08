@@ -11,9 +11,9 @@ import { ActorModule } from './actor/actor.module';
 // import { FilmActorModule } from './film-actor/film-actor.module';
 // import { CustomerModule } from './customer/customer.module';
 // import { CountryModule } from './country/country.module';
-// import { CityModule } from './city/city.module';
-// import { CategoryModule } from './category/category.module';
-// import { AddressModule } from './address/address.module';
+import { CityModule } from './city/city.module';
+import { CategoryModule } from './category/category.module';
+import { AddressModule } from './address/address.module';
 // import { LanguageModule } from './language/language.module';
 import { HomeModule } from './home/home.module';
 
@@ -37,9 +37,9 @@ import { HomeModule } from './home/home.module';
     FilmModule,
     ActorModule,
     HomeModule,
-    // AddressModule,
-    // CategoryModule,
-    // CityModule,
+    AddressModule,
+    CategoryModule,
+    CityModule,
     // CountryModule,
     // CustomerModule,
     // FilmActorModule,

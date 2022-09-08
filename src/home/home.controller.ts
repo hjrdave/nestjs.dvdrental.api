@@ -1,4 +1,10 @@
-import { Controller } from '@nestjs/common';
+import { Get, Controller, Render } from '@nestjs/common';
 
-@Controller('home')
-export class HomeController {}
+@Controller()
+export class HomeController {
+    @Get()
+    @Render('index')
+    root() {
+        return { message: 'Hello world!' };
+    }
+}
