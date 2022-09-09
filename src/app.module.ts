@@ -10,7 +10,7 @@ import { ActorModule } from './actor/actor.module';
 // import { FilmCategoryModule } from './film-category/film-category.module';
 // import { FilmActorModule } from './film-actor/film-actor.module';
 // import { CustomerModule } from './customer/customer.module';
-// import { CountryModule } from './country/country.module';
+import { CountryModule } from './country/country.module';
 import { CityModule } from './city/city.module';
 import { CategoryModule } from './category/category.module';
 import { AddressModule } from './address/address.module';
@@ -40,7 +40,7 @@ import { HomeModule } from './home/home.module';
     AddressModule,
     CategoryModule,
     CityModule,
-    // CountryModule,
+    CountryModule,
     // CustomerModule,
     // FilmActorModule,
     // FilmCategoryModule,
