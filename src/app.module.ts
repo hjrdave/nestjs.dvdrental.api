@@ -8,8 +8,8 @@ import { ActorModule } from './actor/actor.module';
 // import { PaymentModule } from './payment/payment.module';
 // import { InventoryModule } from './inventory/inventory.module';
 // import { FilmCategoryModule } from './film-category/film-category.module';
-// import { FilmActorModule } from './film-actor/film-actor.module';
-// import { CustomerModule } from './customer/customer.module';
+import { FilmActorModule } from './film-actor/film-actor.module';
+import { CustomerModule } from './customer/customer.module';
 import { CountryModule } from './country/country.module';
 import { CityModule } from './city/city.module';
 import { CategoryModule } from './category/category.module';
@@ -41,8 +41,8 @@ import { HomeModule } from './home/home.module';
     CategoryModule,
     CityModule,
     CountryModule,
-    // CustomerModule,
-    // FilmActorModule,
+    CustomerModule,
+    FilmActorModule,
     // FilmCategoryModule,
     // InventoryModule,
     // PaymentModule,
