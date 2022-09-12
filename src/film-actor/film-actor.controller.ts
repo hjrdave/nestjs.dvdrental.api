@@ -1,7 +1,5 @@
 import { Controller, Get, Param, ParseIntPipe } from '@nestjs/common';
-import { PaginateQuery, Paginated, Paginate } from 'nestjs-paginate';
 import { FilmActorService } from './film-actor.service';
-import { FilmActor } from './film-actor.entity';
 
 @Controller('film-actor')
 export class FilmActorController {

@@ -7,7 +7,7 @@ import { ActorModule } from './actor/actor.module';
 // import { RentalModule } from './rental/rental.module';
 // import { PaymentModule } from './payment/payment.module';
 // import { InventoryModule } from './inventory/inventory.module';
-// import { FilmCategoryModule } from './film-category/film-category.module';
+import { FilmCategoryModule } from './film-category/film-category.module';
 import { FilmActorModule } from './film-actor/film-actor.module';
 import { CustomerModule } from './customer/customer.module';
 import { CountryModule } from './country/country.module';
@@ -43,7 +43,7 @@ import { HomeModule } from './home/home.module';
     CountryModule,
     CustomerModule,
     FilmActorModule,
-    // FilmCategoryModule,
+    FilmCategoryModule,
     // InventoryModule,
     // PaymentModule,
     // RentalModule,
