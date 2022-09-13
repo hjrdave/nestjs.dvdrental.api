@@ -6,7 +6,7 @@ export class ActorController {
     constructor(private readonly actorService: ActorService) { }
 
     @Get()
-    getFilms() {
+    getActors() {
         return this.actorService.findActor();
     }
 

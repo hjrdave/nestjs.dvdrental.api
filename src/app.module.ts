@@ -16,7 +16,7 @@ import { CategoryModule } from './category/category.module';
 import { AddressModule } from './address/address.module';
 import { LanguageModule } from './language/language.module';
 import { HomeModule } from './home/home.module';
-//import { StoreModule } from './store/store.module';
+import { StoreModule } from './store/store.module';
 
 @Module({
   imports: [
@@ -50,7 +50,7 @@ import { HomeModule } from './home/home.module';
     RentalModule,
     StaffModule,
     LanguageModule,
-    //StoreModule
+    StoreModule
   ]
 })
 export class AppModule { }
