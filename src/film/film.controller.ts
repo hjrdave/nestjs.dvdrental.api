@@ -13,7 +13,7 @@ export class FilmController {
     }
 
     @Get('id/:id')
-    findFilmById(@Param('id', ParseIntPipe) id: number) {
+    getFilmById(@Param('id', ParseIntPipe) id: number) {
         return this.filmService.findFilmById(id);
     }
 }

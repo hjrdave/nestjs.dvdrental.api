@@ -11,7 +11,7 @@ export class LanguageController {
     }
 
     @Get('id/:id')
-    findLanguageById(@Param('id', ParseIntPipe) id: number) {
+    getLanguageById(@Param('id', ParseIntPipe) id: number) {
         return this.languageService.findLanguageById(id);
     }
 }

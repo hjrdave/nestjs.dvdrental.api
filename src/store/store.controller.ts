@@ -11,7 +11,7 @@ export class StoreController {
     }
 
     @Get('id/:id')
-    findStoreById(@Param('id', ParseIntPipe) id: number) {
+    getStoreById(@Param('id', ParseIntPipe) id: number) {
         return this.storeService.findStoreById(id);
     }
 }

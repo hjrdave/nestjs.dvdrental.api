@@ -11,7 +11,7 @@ export class StaffController {
     }
 
     @Get('id/:id')
-    findStaffById(@Param('id', ParseIntPipe) id: number) {
+    getStaffById(@Param('id', ParseIntPipe) id: number) {
         return this.staffService.findStaffById(id);
     }
 }

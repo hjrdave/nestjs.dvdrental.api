@@ -13,7 +13,7 @@ export class PaymentController {
     }
 
     @Get('id/:id')
-    findPaymentById(@Param('id', ParseIntPipe) id: number) {
+    getPaymentById(@Param('id', ParseIntPipe) id: number) {
         return this.paymentService.findPaymentById(id);
     }
 }

@@ -11,7 +11,7 @@ export class ActorController {
     }
 
     @Get('id/:id')
-    findActorById(@Param('id', ParseIntPipe) id: number) {
+    getActorById(@Param('id', ParseIntPipe) id: number) {
         return this.actorService.findActorById(id);
     }
 

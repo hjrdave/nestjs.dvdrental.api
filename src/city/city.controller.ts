@@ -13,7 +13,7 @@ export class CityController {
     }
 
     @Get('id/:id')
-    findUsersById(@Param('id', ParseIntPipe) id: number) {
+    getCityById(@Param('id', ParseIntPipe) id: number) {
         return this.cityService.findCityById(id);
     }
 }

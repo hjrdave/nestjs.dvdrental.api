@@ -13,7 +13,7 @@ export class AddressController {
     }
 
     @Get('id/:id')
-    findAddressById(@Param('id', ParseIntPipe) id: number) {
+    getAddressById(@Param('id', ParseIntPipe) id: number) {
         return this.addressService.findAddressById(id);
     }
 }

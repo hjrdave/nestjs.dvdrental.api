@@ -13,7 +13,7 @@ export class InventoryController {
     }
 
     @Get('id/:id')
-    findInventoryById(@Param('id', ParseIntPipe) id: number) {
+    getInventoryById(@Param('id', ParseIntPipe) id: number) {
         return this.inventoryService.findInventoryById(id);
     }
 }

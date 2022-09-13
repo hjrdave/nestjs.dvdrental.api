@@ -11,7 +11,7 @@ export class CategoryController {
     }
 
     @Get('id/:id')
-    findCategoryById(@Param('id', ParseIntPipe) id: number) {
+    getCategoryById(@Param('id', ParseIntPipe) id: number) {
         return this.categoryService.findCategoryById(id);
     }
 }

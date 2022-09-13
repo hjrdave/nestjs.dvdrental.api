@@ -13,7 +13,7 @@ export class CountryController {
     }
 
     @Get('id/:id')
-    findCountryById(@Param('id', ParseIntPipe) id: number) {
+    getCountryById(@Param('id', ParseIntPipe) id: number) {
         return this.countryService.findCountryById(id);
     }
 }

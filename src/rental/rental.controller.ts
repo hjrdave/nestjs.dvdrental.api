@@ -13,7 +13,7 @@ export class RentalController {
     }
 
     @Get('id/:id')
-    findRentalById(@Param('id', ParseIntPipe) id: number) {
+    getRentalById(@Param('id', ParseIntPipe) id: number) {
         return this.rentalService.findRentalById(id);
     }
 }
