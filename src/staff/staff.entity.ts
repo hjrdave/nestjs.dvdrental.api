@@ -73,6 +73,6 @@ export class Staff {
         name: 'picture',
         type: 'bytea'
     })
-    picture: File;
+    picture: string;
 
 }
