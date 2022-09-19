@@ -11,8 +11,12 @@
         crossorigin="anonymous"></script>
 </head>
 
+<style>
+
+</style>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top bg-light shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="#">CORY Test API</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -29,56 +33,632 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid bg-secondary" style="height: 400px;">
-        <div class="row" style="height: 100%">
-            <div class="col d-flex justify-content-center align-items-center">
+    <div class="container-fluid bg-secondary bg-gradient" style="height: 400px;">
+        <div class="row d-flex justify-content-center" style="height: 100%">
+            <div class="col-10 d-flex justify-content-start align-items-center">
                 <div>
-                    <h1 class="text-white text-center">CORY Test API</h1>
-                    <p class="text-white text-center">DVD Rental Database</p>
-                    <p class="text-white text-center">Powered By: NestJS and Postgresql</p>
+                    <h1 class="text-white display-1" style="font-size: 3rem">CORY Test API</h1>
+                    <p class="text-white mb-1 lead">Using Open Source DVD Rental Database</p>
+                    <p class="text-white">Powered By: NestJS, Postgresql, and lots of ☕</p>
                 </div>
             </div>
         </div>
     </div>
     <div class="container">
-
+        <div class="row mt-5">
+            <div class="col">
+                <h2>Routes</h2>
+            </div>
+        </div>
         <div class="row mt-4">
-            <div class="col pt-3">
-                <h3>Resources</h3>
-                <p class="mb-2"><a href="film" target="_blank">/film</a></p>
-                <p class="mb-2"><a href="actor" target="_blank">/actor</a></p>
-                <p class="mb-2"><a href="address" target="_blank">/address</a></p>
-                <p class="mb-2"><a href="category" target="_blank">/category</a></p>
-                <p class="mb-2"><a href="city" target="_blank">/city</a></p>
-                <p class="mb-2"><a href="country" target="_blank">/country</a></p>
-                <p class="mb-2"><a href="customer" target="_blank">/customer</a></p>
-                <p class="mb-2"><a href="film-actor" target="_blank">/film-actor</a></p>
-                <p class="mb-2"><a href="film-category" target="_blank">/film-category</a></p>
-                <p class="mb-2"><a href="inventory" target="_blank">/inventory</a></p>
-                <p class="mb-2"><a href="payment" target="_blank">/payment</a></p>
-                <p class="mb-2"><a href="rental" target="_blank">/rental</a></p>
-                <p class="mb-2"><a href="staff" target="_blank">/staff</a></p>
-                <p class="mb-2"><a href="language" target="_blank">/language</a></p>
-                <p class="mb-2"><a href="store" target="_blank">/store</a></p>
-                <h3 class="mt-4">Routes</h3>
-                <div class="row">
-                    <div class="col-3">
-                        <table class="table table-borderless">
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card shadow-sm mt-4 bg-light">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5>Film</h5>
+                            <div>
+                                <span class="badge rounded-pill bg-secondary">Paging</span>
+                                <span class="badge rounded-pill bg-secondary me-1">Count: 1000</span>
+                            </div>
+                        </div>
+                        <table class="table table-borderless table-sm mb-0">
                             <tbody>
                                 <tr>
+                                    <td>GET</td>
                                     <td>
-                                        <p class="mb-2">GET</p>
-                                    </td>
-                                    <td>
-                                        <p class="mb-2"><a href="film" target="_blank">/film</a></p>
+                                        <a href="film" target="_blank">/film</a>
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td>GET</td>
                                     <td>
-                                        <p class="mb-2">GET</p>
+                                        <a href="/film/id/1" target="_blank">/film/id/1</a>
                                     </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
                                     <td>
-                                        <p class="mb-2"><a href="film/id/1" target="_blank">/film/id/1</a></p>
+                                        <a href="/film?limit=5" target="_blank">/film?limit=5</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?page=2" target="_blank">/film?page=2</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card shadow-sm mt-4 bg-light">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5>Actor</h5>
+                            <div>
+                                <span class="badge rounded-pill bg-secondary">Paging</span>
+                                <span class="badge rounded-pill bg-secondary me-1">Count: 1000</span>
+                            </div>
+                        </div>
+                        <table class="table table-borderless table-sm mb-0">
+                            <tbody>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="film" target="_blank">/film</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film/id/1" target="_blank">/film/id/1</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?limit=5" target="_blank">/film?limit=5</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?page=2" target="_blank">/film?page=2</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card shadow-sm mt-4 bg-light">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5>Address</h5>
+                            <div>
+                                <span class="badge rounded-pill bg-secondary">Paging</span>
+                                <span class="badge rounded-pill bg-secondary me-1">Count: 1000</span>
+                            </div>
+                        </div>
+                        <table class="table table-borderless table-sm mb-0">
+                            <tbody>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="film" target="_blank">/film</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film/id/1" target="_blank">/film/id/1</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?limit=5" target="_blank">/film?limit=5</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?page=2" target="_blank">/film?page=2</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card shadow-sm mt-4 bg-light">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5>Category</h5>
+                            <div>
+                                <span class="badge rounded-pill bg-secondary">Paging</span>
+                                <span class="badge rounded-pill bg-secondary me-1">Count: 1000</span>
+                            </div>
+                        </div>
+                        <table class="table table-borderless table-sm mb-0">
+                            <tbody>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="film" target="_blank">/film</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film/id/1" target="_blank">/film/id/1</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?limit=5" target="_blank">/film?limit=5</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?page=2" target="_blank">/film?page=2</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card shadow-sm mt-4 bg-light">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5>City</h5>
+                            <div>
+                                <span class="badge rounded-pill bg-secondary">Paging</span>
+                                <span class="badge rounded-pill bg-secondary me-1">Count: 1000</span>
+                            </div>
+                        </div>
+                        <table class="table table-borderless table-sm mb-0">
+                            <tbody>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="film" target="_blank">/film</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film/id/1" target="_blank">/film/id/1</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?limit=5" target="_blank">/film?limit=5</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?page=2" target="_blank">/film?page=2</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card shadow-sm mt-4 bg-light">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5>Country</h5>
+                            <div>
+                                <span class="badge rounded-pill bg-secondary">Paging</span>
+                                <span class="badge rounded-pill bg-secondary me-1">Count: 1000</span>
+                            </div>
+                        </div>
+                        <table class="table table-borderless table-sm mb-0">
+                            <tbody>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="film" target="_blank">/film</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film/id/1" target="_blank">/film/id/1</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?limit=5" target="_blank">/film?limit=5</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?page=2" target="_blank">/film?page=2</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card shadow-sm mt-4 bg-light">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5>Customer</h5>
+                            <div>
+                                <span class="badge rounded-pill bg-secondary">Paging</span>
+                                <span class="badge rounded-pill bg-secondary me-1">Count: 1000</span>
+                            </div>
+                        </div>
+                        <table class="table table-borderless table-sm mb-0">
+                            <tbody>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="film" target="_blank">/film</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film/id/1" target="_blank">/film/id/1</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?limit=5" target="_blank">/film?limit=5</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?page=2" target="_blank">/film?page=2</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card shadow-sm mt-4 bg-light">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5>Film Actor</h5>
+                            <div>
+                                <span class="badge rounded-pill bg-secondary">Paging</span>
+                                <span class="badge rounded-pill bg-secondary me-1">Count: 1000</span>
+                            </div>
+                        </div>
+                        <table class="table table-borderless table-sm mb-0">
+                            <tbody>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="film" target="_blank">/film</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film/id/1" target="_blank">/film/id/1</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?limit=5" target="_blank">/film?limit=5</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?page=2" target="_blank">/film?page=2</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card shadow-sm mt-4 bg-light">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5>Film Category</h5>
+                            <div>
+                                <span class="badge rounded-pill bg-secondary">Paging</span>
+                                <span class="badge rounded-pill bg-secondary me-1">Count: 1000</span>
+                            </div>
+                        </div>
+                        <table class="table table-borderless table-sm mb-0">
+                            <tbody>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="film" target="_blank">/film</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film/id/1" target="_blank">/film/id/1</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?limit=5" target="_blank">/film?limit=5</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?page=2" target="_blank">/film?page=2</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card shadow-sm mt-4 bg-light">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5>Inventory</h5>
+                            <div>
+                                <span class="badge rounded-pill bg-secondary">Paging</span>
+                                <span class="badge rounded-pill bg-secondary me-1">Count: 1000</span>
+                            </div>
+                        </div>
+                        <table class="table table-borderless table-sm mb-0">
+                            <tbody>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="film" target="_blank">/film</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film/id/1" target="_blank">/film/id/1</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?limit=5" target="_blank">/film?limit=5</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?page=2" target="_blank">/film?page=2</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card shadow-sm mt-4 bg-light">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5>Payment</h5>
+                            <div>
+                                <span class="badge rounded-pill bg-secondary">Paging</span>
+                                <span class="badge rounded-pill bg-secondary me-1">Count: 1000</span>
+                            </div>
+                        </div>
+                        <table class="table table-borderless table-sm mb-0">
+                            <tbody>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="film" target="_blank">/film</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film/id/1" target="_blank">/film/id/1</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?limit=5" target="_blank">/film?limit=5</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?page=2" target="_blank">/film?page=2</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card shadow-sm mt-4 bg-light">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5>Rental</h5>
+                            <div>
+                                <span class="badge rounded-pill bg-secondary">Paging</span>
+                                <span class="badge rounded-pill bg-secondary me-1">Count: 1000</span>
+                            </div>
+                        </div>
+                        <table class="table table-borderless table-sm mb-0">
+                            <tbody>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="film" target="_blank">/film</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film/id/1" target="_blank">/film/id/1</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?limit=5" target="_blank">/film?limit=5</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?page=2" target="_blank">/film?page=2</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card shadow-sm mt-4 bg-light">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5>Staff</h5>
+                            <div>
+                                <span class="badge rounded-pill bg-secondary">Paging</span>
+                                <span class="badge rounded-pill bg-secondary me-1">Count: 1000</span>
+                            </div>
+                        </div>
+                        <table class="table table-borderless table-sm mb-0">
+                            <tbody>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="film" target="_blank">/film</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film/id/1" target="_blank">/film/id/1</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?limit=5" target="_blank">/film?limit=5</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?page=2" target="_blank">/film?page=2</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card shadow-sm mt-4 bg-light">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5>Language</h5>
+                            <div>
+                                <span class="badge rounded-pill bg-secondary">Paging</span>
+                                <span class="badge rounded-pill bg-secondary me-1">Count: 1000</span>
+                            </div>
+                        </div>
+                        <table class="table table-borderless table-sm mb-0">
+                            <tbody>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="film" target="_blank">/film</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film/id/1" target="_blank">/film/id/1</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?limit=5" target="_blank">/film?limit=5</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?page=2" target="_blank">/film?page=2</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card shadow-sm mt-4 bg-light">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5>Store</h5>
+                            <div>
+                                <span class="badge rounded-pill bg-secondary">Paging</span>
+                                <span class="badge rounded-pill bg-secondary me-1">Count: 1000</span>
+                            </div>
+                        </div>
+                        <table class="table table-borderless table-sm mb-0">
+                            <tbody>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="film" target="_blank">/film</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film/id/1" target="_blank">/film/id/1</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?limit=5" target="_blank">/film?limit=5</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GET</td>
+                                    <td>
+                                        <a href="/film?page=2" target="_blank">/film?page=2</a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -87,7 +667,11 @@
                 </div>
             </div>
         </div>
+
     </div>
 </body>
+<footer class="d-flex justify-content-center mt-4">
+    <p><small>Copyright 2022 Mediafish.io</small></p>
+</footer>
 
 </html>
