@@ -11,6 +11,7 @@ async function bootstrap() {
     preflightContinue: false,
     credentials: false,
   };
+  app.getHttpAdapter().getInstance().set('json spaces', 2);
   app.enableCors(options);
   app.useStaticAssets(resolve('./src/public'));
   app.setBaseViewsDir(resolve('./src/views'));

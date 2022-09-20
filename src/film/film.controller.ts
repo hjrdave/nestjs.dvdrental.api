@@ -1,4 +1,4 @@
-import { Controller, Get, Param, ParseIntPipe } from '@nestjs/common';
+import { Controller, Get, Param, ParseIntPipe, Query } from '@nestjs/common';
 import { PaginateQuery, Paginated, Paginate } from 'nestjs-paginate';
 import { FilmService } from './film.service';
 import { Film } from './film.entity';
@@ -8,7 +8,10 @@ export class FilmController {
     constructor(private readonly filmService: FilmService) { }
 
     @Get()
-    getFilms(@Paginate() query: PaginateQuery): Promise<Paginated<Film>> {
+    getFilms(
+        @Paginate(['title']) query: PaginateQuery,
+        // @Query('title') title: string
+    ): Promise<Paginated<Film>> {
         return this.filmService.findFilms(query);
     }
 
