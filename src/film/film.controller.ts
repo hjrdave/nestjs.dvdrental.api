@@ -8,10 +8,7 @@ export class FilmController {
     constructor(private readonly filmService: FilmService) { }
 
     @Get()
-    getFilms(
-        @Paginate(['title']) query: PaginateQuery,
-        // @Query('title') title: string
-    ): Promise<Paginated<Film>> {
+    getFilms(@Paginate(['title']) query: PaginateQuery): Promise<Paginated<Film>> {
         return this.filmService.findFilms(query);
     }
 

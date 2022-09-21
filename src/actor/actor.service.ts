@@ -10,8 +10,8 @@ export class ActorService {
         private readonly actorRepository: Repository<Actor>,
     ) { };
 
-    findActor() {
-        return this.actorRepository.find();
+    findActor(query: { firstname?: string; lastname?: string; }) {
+        return this.actorRepository.find({ where: { firstName: query.firstname, lastName: query.lastname } });
     }
 
     findActorById(id: number) {

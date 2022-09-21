@@ -8,7 +8,7 @@ export class AddressController {
     constructor(private readonly addressService: AddressService) { }
 
     @Get()
-    getAddresses(@Paginate() query: PaginateQuery): Promise<Paginated<Address>> {
+    getAddresses(@Paginate(['address', 'district', 'zipcode', 'phone']) query: PaginateQuery): Promise<Paginated<Address>> {
         return this.addressService.findAddress(query);
     }
 
