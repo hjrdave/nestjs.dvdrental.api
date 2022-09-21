@@ -17,6 +17,7 @@ export class FilmService {
     ) { };
 
     findFilms(query: PaginateQuery): Promise<Paginated<Film>> {
+        const title = query.filter?.title;
         return paginate(query, this.filmRepository, {
             sortableColumns: ['id'],
             defaultSortBy: [['id', 'ASC']],

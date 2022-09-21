@@ -41,7 +41,8 @@
                 <div>
                     <h1 class="text-white display-1" style="font-size: 3rem">CORY Test API</h1>
                     <p class="text-white mb-1 lead">Using Open Source DVD Rental Database</p>
-                    <p class="text-white">Powered By: NestJS, Postgresql, and lots of ☕</p>
+                    <p class="text-white">Powered By: NestJS, Postgresql, and lots of <span class="fs-3">☕</span>
+                    </p>
                 </div>
             </div>
         </div>
@@ -86,7 +87,8 @@
                                         <p class="mb-0 text-muted">GET</p>
                                     </td>
                                     <td>
-                                        <a href="/film?limit=5" target="_blank">/film?limit=5</a>
+                                        <a href="/film?page=2&limit=25&sortBy=title:DESC"
+                                            target="_blank">/film?page=2&limit=25&sortBy=title:DESC</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -94,7 +96,8 @@
                                         <p class="mb-0 text-muted">GET</p>
                                     </td>
                                     <td>
-                                        <a href="/film?page=2" target="_blank">/film?page=2</a>
+                                        <a href="/film?search=Dinosaur&filter.rating=PG"
+                                            target="_blank">/film?search=Dinosaur&filter.rating=PG</a>
                                     </td>
                                 </tr>
                             </tbody>
