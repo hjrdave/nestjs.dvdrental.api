@@ -17,7 +17,18 @@ export class FilmService {
     ) { };
 
     findFilms(query: PaginateQuery): Promise<Paginated<Film>> {
-        const title = query.filter?.title;
+
+        //allows for filters to be an empty string or undefined.
+        const createFilters = (filters: { title?: string; rating?: string }) => {
+            let filterProps: any = {};
+            if (filters?.title?.length > 0 && filters?.title !== undefined) {
+                filterProps.title = [FilterOperator.EQ];
+            };
+            if (filters?.rating?.length > 0 && filters?.rating !== undefined) {
+                filterProps.rating = [FilterOperator.EQ];
+            };
+            return filterProps;
+        };
         return paginate(query, this.filmRepository, {
             sortableColumns: ['id'],
             defaultSortBy: [['id', 'ASC']],
@@ -25,10 +36,7 @@ export class FilmService {
             nullSort: 'last',
             defaultLimit: 50,
             maxLimit: 1000,
-            filterableColumns: {
-                title: [FilterOperator.EQ],
-                rating: [FilterOperator.EQ]
-            },
+            filterableColumns: createFilters(query.filter)
         });
     }
 
