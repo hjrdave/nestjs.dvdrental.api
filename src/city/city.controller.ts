@@ -8,7 +8,7 @@ export class CityController {
     constructor(private readonly cityService: CityService) { }
 
     @Get()
-    getCities(@Paginate() query: PaginateQuery): Promise<Paginated<City>> {
+    getCities(@Paginate(['city']) query: PaginateQuery): Promise<Paginated<City>> {
         return this.cityService.findCities(query);
     }
 
