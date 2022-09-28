@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { FilmActor } from './film-actor.entity';
+import { PaginateQuery, paginate, Paginated, FilterOperator } from 'nestjs-paginate';
 
 @Injectable()
 export class FilmActorService {
@@ -10,8 +11,14 @@ export class FilmActorService {
         private readonly filmActorRepository: Repository<FilmActor>,
     ) { };
 
-    findFilmActors() {
-        return this.filmActorRepository.find();
+    findFilmActors(query: PaginateQuery): Promise<Paginated<FilmActor>> {
+        return paginate(query, this.filmActorRepository, {
+            sortableColumns: ['id'],
+            defaultSortBy: [['id', 'ASC']],
+            nullSort: 'last',
+            defaultLimit: 50,
+            maxLimit: 5462,
+        });
     }
 
     findFilmActorById(id: number) {

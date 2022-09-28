@@ -8,7 +8,7 @@ export class CustomerController {
     constructor(private readonly customerService: CustomerService) { }
 
     @Get()
-    getCustomers(@Paginate() query: PaginateQuery): Promise<Paginated<Customer>> {
+    getCustomers(@Paginate(['firstName', 'lastName', 'email']) query: PaginateQuery): Promise<Paginated<Customer>> {
         return this.customerService.findCustomers(query);
     }
 
