@@ -8,7 +8,7 @@ export class PaymentController {
     constructor(private readonly paymentService: PaymentService) { }
 
     @Get()
-    getPayments(@Paginate() query: PaginateQuery): Promise<Paginated<Payment>> {
+    getPayments(@Paginate(['amount']) query: PaginateQuery): Promise<Paginated<Payment>> {
         return this.paymentService.findPayments(query);
     }
 

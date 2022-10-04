@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { PaginateQuery, paginate, Paginated } from 'nestjs-paginate';
+import { PaginateQuery, paginate, Paginated, FilterOperator } from 'nestjs-paginate';
 import { Payment } from './payment.entity';
 
 @Injectable()
@@ -17,7 +17,10 @@ export class PaymentService {
             defaultSortBy: [['id', 'ASC']],
             nullSort: 'last',
             defaultLimit: 50,
-            maxLimit: 14596
+            maxLimit: 14596,
+            filterableColumns: {
+                amount: [FilterOperator.EQ]
+            }
         });
     }
 
