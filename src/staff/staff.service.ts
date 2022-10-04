@@ -41,18 +41,7 @@ export class StaffService {
     }
 
     async updateStaffById(id: number, body: StaffDTO) {
-
         return this.staffRepository.update(id, body);
     }
 }
 
-//example staff
-// {
-//     "firstName": "Kevin",
-//         "lastName": "Foo",
-//             "email": "kfoo@foo.com",
-//                 "username": "kfoo",
-//                     "password": "crazyFoo",
-//                         "storeId": 2,
-//                             "addressId": 2
-// }

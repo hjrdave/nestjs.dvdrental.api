@@ -47,7 +47,7 @@ export class Customer {
         type: 'boolean',
         nullable: false
     })
-    activeBool: string;
+    activeBool: boolean;
 
     @Column({
         name: 'create_date',
