@@ -17,6 +17,8 @@ import { AddressModule } from './address/address.module';
 import { LanguageModule } from './language/language.module';
 import { HomeModule } from './home/home.module';
 import { StoreModule } from './store/store.module';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -50,7 +52,9 @@ import { StoreModule } from './store/store.module';
     RentalModule,
     StaffModule,
     LanguageModule,
-    StoreModule
+    StoreModule,
+    AuthModule,
+    UsersModule
   ]
 })
 export class AppModule { }

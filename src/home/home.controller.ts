@@ -5,6 +5,6 @@ export class HomeController {
     @Get()
     @Render('index')
     root() {
-        return { message: 'Hello world!' };
+        return {};
     }
 }
